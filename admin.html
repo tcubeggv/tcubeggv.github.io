@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Startup Registration</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-bg">
+
+  <!-- LOGIN SECTION -->
+  <div id="loginSection" class="admin-login-container">
+    <div class="form-card login-card">
+      <h2>Admin Login</h2>
+      <p>Enter your credentials to access the dashboard.</p>
+      <form id="loginForm">
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" id="adminUser" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="adminPass" required>
+        </div>
+        <button type="submit" id="loginBtn" class="btn btn-primary full-width">
+          <span id="loginText">Login</span>
+          <span id="loginSpinner" class="spinner hidden"></span>
+        </button>
+        <div id="loginError" class="error-msg hidden"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div id="dashboardSection" class="dashboard-container hidden">
+    <header class="admin-header">
+      <h2>Startup Registrations Portal</h2>
+      <button id="logoutBtn" class="btn btn-outline btn-sm">Logout</button>
+    </header>
+
+    <div class="dashboard-controls">
+      <input type="text" id="searchInput" placeholder="Search ID, Startup, Email..." class="search-input">
+      <button id="exportBtn" class="btn btn-secondary">Export CSV</button>
+    </div>
+
+    <div class="table-responsive">
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>Registration ID</th>
+            <th>Date</th>
+            <th>Startup Name</th>
+            <th>Founder</th>
+            <th>Email</th>
+            <th>Pitch Deck Link</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows injected via JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pagination">
+      <button id="prevBtn" class="btn btn-sm" disabled>Previous</button>
+      <span id="pageInfo">Page 1</span>
+      <button id="nextBtn" class="btn btn-sm">Next</button>
+    </div>
+  </div>
+
+  <!-- VIEW MODAL -->
+  <div id="viewModal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modalTitle">Startup Details</h3>
+        <span id="closeModal" class="close">&times;</span>
+      </div>
+      <div id="modalBody" class="modal-body">
+        <!-- Details injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Successful</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="success-page">
+
+  <div class="container success-container">
+    <div class="success-card">
+      <div class="success-icon">✓</div>
+      <h1>Registration Successful!</h1>
+      <p>Your startup has been successfully registered.</p>
+      
+      <div class="id-box">
+        <span>Registration ID:</span>
+        <h2 id="displayId">STARTUP-LOADING...</h2>
+      </div>
+
+      <p class="email-note">We have sent a confirmation email to your registered email address.</p>
+
+      <div class="success-actions">
+        <a href="index.html" class="btn btn-outline">Register Another Startup</a>
+        <a href="#" class="btn btn-primary">Back to Home</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const regId = urlParams.get('id');
+    if (regId) {
+      document.getElementById('displayId').textContent = regId;
+    }
+  </script>
+</body>
+</html>

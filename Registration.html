@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Registration | Submit Your Idea</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <h1>Startup Registration</h1>
+      <p>Submit your innovative idea and join the hackathon</p>
+    </div>
+  </header>
+
+  <main class="container form-container">
+    <form id="registrationForm">
+      
+      <!-- Startup Details -->
+      <div class="form-card">
+        <h2>Startup Details</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startupName">Startup Name *</label>
+            <input type="text" id="startupName" name="startupName" required placeholder="e.g. InnovateTech">
+          </div>
+          <div class="form-group">
+            <label for="founderName">Founder / Team Name *</label>
+            <input type="text" id="founderName" name="founderName" required placeholder="Team Name or Lead Founder">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactPerson">Contact Person Details *</label>
+          <input type="text" id="contactPerson" name="contactPerson" required placeholder="Full Name">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required placeholder="hello@startup.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+1 234 567 8900">
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem Statement & Solution -->
+      <div class="form-card">
+        <h2>The Problem & Solution</h2>
+        <div class="form-group">
+          <label for="problemStatement">Problem Statement *</label>
+          <textarea id="problemStatement" name="problemStatement" rows="4" required placeholder="What problem does your idea solve?"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="proposedSolution">Proposed Solution *</label>
+          <textarea id="proposedSolution" name="proposedSolution" rows="4" required placeholder="Explain your idea/product briefly."></textarea>
+        </div>
+      </div>
+
+      <!-- Market & USP -->
+      <div class="form-card">
+        <h2>Market & USP</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="targetAudience">Target Audience *</label>
+            <input type="text" id="targetAudience" name="targetAudience" required placeholder="Who are your users?">
+          </div>
+          <div class="form-group">
+            <label for="marketOpportunity">Market Opportunity *</label>
+            <input type="text" id="marketOpportunity" name="marketOpportunity" required placeholder="Size of the market">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="usp">Unique Selling Proposition (USP) *</label>
+          <textarea id="usp" name="usp" rows="3" required placeholder="What makes your idea unique from competitors?"></textarea>
+        </div>
+      </div>
+
+      <!-- Pitch Deck & Links Submission -->
+      <div class="form-card">
+        <h2>Pitch Deck & Submission Links</h2>
+        <div class="form-group">
+          <label for="pitchDeck">Pitch Deck / Idea Description *</label>
+          <textarea id="pitchDeck" name="pitchDeck" rows="3" required placeholder="Brief summary of your deck/idea"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="demoLink">Demo Link (Optional)</label>
+            <input type="url" id="demoLink" name="demoLink" placeholder="https://youtube.com/...">
+          </div>
+          <div class="form-group">
+            <label for="website">Website / GitHub (Optional)</label>
+            <input type="url" id="website" name="website" placeholder="https://github.com/...">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="googleDriveLink">Pitch Deck Google Drive Link (PPT/PDF) *</label>
+          <input type="url" id="googleDriveLink" name="googleDriveLink" required placeholder="https://drive.google.com/file/d/...">
+          <small style="color: var(--text-light); font-size: 0.85rem; display: block; margin-top: 5px;">
+            <strong>Important:</strong> Ensure the link access is set to "Anyone with the link can view".
+          </small>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" id="submitBtn" class="btn btn-primary">
+          <span id="btnText">Submit Registration</span>
+          <span id="btnSpinner" class="spinner hidden"></span>
+        </button>
+      </div>
+      <div id="errorMessage" class="error-msg hidden"></div>
+      
+    </form>
+  </main>
+
+  <script src="js/registration.js"></script>
+</body>
+</html>
