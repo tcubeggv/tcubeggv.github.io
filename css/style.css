@@ -83,3 +83,18 @@ tr:hover { background: #f8f9fa; }
 .modal-body { padding: 20px; }
 .detail-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
 .detail-grid strong { color: var(--text-light); }
+/* Logo Styles */
+.brand-logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+.header-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 15px;
+}
+.admin-header-left {
+  display: flex;
+  align-items: center;
+}
